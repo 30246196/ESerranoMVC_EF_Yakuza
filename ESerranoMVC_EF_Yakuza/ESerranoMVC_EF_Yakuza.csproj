@@ -131,9 +131,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Members.cs" />
-    <Compile Include="Models\Principal_Clans.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\Principal_Clan.cs" />
     <Compile Include="Models\Yakuza.cs" />
+    <Compile Include="Models\YakuzaContext.cs" />
     <Compile Include="Models\Yakuza_Hierarchy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

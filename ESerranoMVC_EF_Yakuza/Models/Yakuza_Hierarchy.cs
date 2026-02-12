@@ -10,10 +10,15 @@ namespace ESerranoMVC_EF_Yakuza.Models
     {
         //[Key]
         public int Entry_ID { get; set; }
-        //[ForeignKey("Yakuza_ID")]
-        public int Parent_Entry_ID { get; set; }
-        //[ForeignKey("Yakuza_ID")]
+
+        // Self-referencing parent
+        [ForeignKey("Parent")]
+        public int? Parent_Entry_ID { get; set; }
+
+        // Foreign Key
+        [ForeignKey("Yakuza")]
         public int Yakuza_ID { get; set; }
+
         public int Level_Number { get; set; }
         public string English_Entry_Name { get; set; }
         public string Japanese_Entry_Name { get; set; }
@@ -28,5 +33,11 @@ namespace ESerranoMVC_EF_Yakuza.Models
         // 4. Kaikei (Accountant)
         // 5. Shatei (Junior)
 
+        // One Yakuza organisation has many hierarchy entries or levels.
+
+        // NAVIGATION
+        public virtual Yakuza Yakuza    { get; set; }
+        public virtual Yakuza_Hierarchy Parent { get; set; } 
+        public virtual ICollection<Yakuza_Hierarchy> Children { get; set; }
     }
 }

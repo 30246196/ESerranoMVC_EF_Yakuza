@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,7 +8,9 @@ namespace ESerranoMVC_EF_Yakuza.Models
 {
     public class Yakuza
     {
+        [Key]
         public int Yakuza_ID { get; set; }
+
         public string Origin { get; set; }
         public int DataTime { get; set; }
         public int Membership { get; set; }
@@ -19,5 +22,9 @@ namespace ESerranoMVC_EF_Yakuza.Models
         // Membership: 102,400
         // Activities: Extortion, Gambling, Drug Trafficking, Prostitution, Money Laundering, etc.
 
+        // ONE TO MANY
+        // One Yakuza has many Principal Clans
+        // Each Clan belongs to exactly one Yakuza
+        public virtual ICollection<Principal_Clan> Principal_Clans { get; set; }
     }
 }
