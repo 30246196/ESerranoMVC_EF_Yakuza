@@ -10,7 +10,7 @@ namespace ESerranoMVC_EF_Yakuza.Models
     {
         [Key]
         public int Member_ID { get; set; }
-        //[Foreign Key("Clan_Number")]
+        //   [Foreign Key("Clan_Number")]
         public int Clan_Number { get; set; }
         public string Family_Name { get; set; }
         public string Personal_Name { get; set; }
