@@ -135,6 +135,7 @@
     <Compile Include="Models\Principal_Clan.cs" />
     <Compile Include="Models\Yakuza.cs" />
     <Compile Include="Models\YakuzaContext.cs" />
+    <Compile Include="Models\YakuzaDbInitializer.cs" />
     <Compile Include="Models\Yakuza_Hierarchy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
