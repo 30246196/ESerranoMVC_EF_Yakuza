@@ -8,6 +8,8 @@ namespace ESerranoMVC_EF_Yakuza.Models
 {
     public class YakuzaContext:DbContext // inherits from DbContext, which is the core EF class that represents a session with the db.The YakuzaContext is the bridge between C# classes and tables in the db.
     {
+        public YakuzaContext(): base("YakuzaConnection") { } // added when <connectionStrings> is added in Web.config
+
         public DbSet<Yakuza> Yakuza { get; set; } // Yakuza is the table of Yakuza records.
         public DbSet<Principal_Clan> PrincipalClans { get; set; }// PrincipalClans is the table for Principal_Clan entities
         public DbSet<Member> Members { get; set; }// Members is the table for Member entities
