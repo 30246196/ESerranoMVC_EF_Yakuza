@@ -1,0 +1,84 @@
+﻿@model IEnumerable<ESerranoMVC_EF_Yakuza.Models.Member>
+
+@{
+    ViewBag.Title = "Members List";
+}
+
+<div class="section-banner" style="background: linear-gradient(to right, #333, #8B0000);">
+    <h2>Members</h2>
+    <p>Profiles, skills, and clan affiliations.</p>
+ </div>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Clan.Clan_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Family_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Personal_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Joined_Clan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_of_Birth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Deceased)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Skills)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Level_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Japanese_Entry_Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Clan.Clan_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Family_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Personal_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_Joined_Clan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_of_Birth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date_Deceased)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Skills)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Level_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Japanese_Entry_Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Member_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Member_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Member_ID })
+        </td>
+    </tr>
+}
+
+</table>

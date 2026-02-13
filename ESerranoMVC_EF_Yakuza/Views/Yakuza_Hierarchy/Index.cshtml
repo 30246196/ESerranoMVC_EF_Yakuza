@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ESerranoMVC_EF_Yakuza.Models.Yakuza_Hierarchy>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="section-banner" style="background: linear-gradient(to right, #222, #C9A86A);">
+    <h2>Yakuza Hierarchy</h2>
+    <p>Explore the traditional ranking system from Oyabun to Shatei.</p>
+ </div>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Parent.English_Entry_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Yakuza.Origin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Level_Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.English_Entry_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Japanese_Entry_Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Parent.English_Entry_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Yakuza.Origin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Level_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.English_Entry_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Japanese_Entry_Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Entry_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Entry_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Entry_ID })
+        </td>
+    </tr>
+}
+
+</table>

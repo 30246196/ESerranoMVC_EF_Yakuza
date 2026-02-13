@@ -18,3 +18,95 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* Global background */
+body {
+    background-color: #F5F5F5;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Navigation bar */
+.navbar-inverse {
+    background-color: #222;
+    border-color: #8B0000;
+}
+
+    .navbar-inverse .navbar-brand,
+    .navbar-inverse .navbar-nav > li > a {
+        color: #C9A86A !important;
+        font-weight: 600;
+    }
+
+/* Section banners */
+.section-banner {
+    background: linear-gradient(to right, #8B0000, #222);
+    color: white;
+    padding: 25px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+}
+
+/* Panels */
+.panel-heading {
+    background-color: #8B0000 !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #8B0000;
+    border-color: #8B0000;
+}
+
+    .btn-primary:hover {
+        background-color: #A30000;
+        border-color: #A30000;
+    }
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #C9A86A;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 3px solid #8B0000;
+    text-align: center;
+}
+
+
+.card {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: transform .2s ease-in-out;
+}
+
+    .card:hover {
+        transform: scale(1.03);
+    }
+
+.card-body h4 {
+    font-weight: 600;
+}
+
+.navbar-inverse .navbar-nav > li > a i {
+    margin-right: 6px;
+}
+
+/* Elegant Gold Button */
+.btn-gold {
+    background-color: #C9A86A; /* soft gold */
+    border-color: #C9A86A;
+    color: #222; /* dark text for contrast */
+    font-weight: 600;
+    transition: all .2s ease-in-out;
+}
+
+.btn-gold:hover {
+    background-color: #B08F54; /* deeper gold on hover */
+    border-color: #B08F54;
+    color: #fff;
+    transform: scale(1.05);
+}
+

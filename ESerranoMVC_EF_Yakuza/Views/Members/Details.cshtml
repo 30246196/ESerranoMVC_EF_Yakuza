@@ -1,0 +1,90 @@
+﻿@model ESerranoMVC_EF_Yakuza.Models.Member
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Member</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Clan.Clan_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clan.Clan_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Family_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Family_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Personal_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Personal_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Joined_Clan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Joined_Clan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_of_Birth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_of_Birth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Deceased)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Deceased)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Skills)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Skills)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Level_Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Level_Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Japanese_Entry_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Japanese_Entry_Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Member_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,96 @@
+﻿@model ESerranoMVC_EF_Yakuza.Models.Member
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Member</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Clan.Clan_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clan.Clan_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Family_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Family_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Personal_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Personal_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Joined_Clan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Joined_Clan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_of_Birth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_of_Birth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Deceased)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Deceased)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Skills)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Skills)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Level_Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Level_Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Japanese_Entry_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Japanese_Entry_Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

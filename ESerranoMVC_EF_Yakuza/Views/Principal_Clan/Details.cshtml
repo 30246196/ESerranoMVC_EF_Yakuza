@@ -1,0 +1,82 @@
+﻿@model ESerranoMVC_EF_Yakuza.Models.Principal_Clan
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Principal_Clan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Yakuza.Origin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Yakuza.Origin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Clan_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Clan_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Founding_Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Founding_Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Years_Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Years_Active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Territory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Territory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ethnicity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ethnicity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Membership)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Membership)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Criminal_Activities)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Criminal_Activities)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Clan_Number }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

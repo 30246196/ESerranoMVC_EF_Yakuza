@@ -1,0 +1,54 @@
+﻿@model IEnumerable<ESerranoMVC_EF_Yakuza.Models.Yakuza>
+
+@{
+    ViewBag.Title = "Yakuza";
+}
+
+<div class="section-banner">
+   <h2>Yakuza Organisations</h2>
+    <p>Explore the origins, creation dates, and activities of each organisation.</p>
+ </div>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Origin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Creation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Membership)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Activities)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Origin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Creation)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Membership)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Activities)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Yakuza_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Yakuza_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Yakuza_ID })
+        </td>
+    </tr>
+}
+
+</table>
