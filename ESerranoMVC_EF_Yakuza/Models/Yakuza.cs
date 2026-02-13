@@ -12,7 +12,7 @@ namespace ESerranoMVC_EF_Yakuza.Models
         public int Yakuza_ID { get; set; }
 
         public string Origin { get; set; }
-        public int DataTime { get; set; }
+        public int Creation { get; set; } // year of creation a integer
         public int Membership { get; set; }
         public string Activities { get; set; }
 
